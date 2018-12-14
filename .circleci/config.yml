@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:11.4.0-stretch
+      - image: circleci/node:11.4.0-stretch-browsers
 
     working_directory: ~/repo
 
