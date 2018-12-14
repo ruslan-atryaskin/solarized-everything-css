@@ -48,5 +48,5 @@ workflows:
   version: 2.1
   build-workflow:
     jobs:
-      - build
+      - build:
           context: DEFAULT
