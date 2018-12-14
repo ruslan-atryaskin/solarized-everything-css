@@ -13,7 +13,12 @@ jobs:
     steps:
       - checkout
 
-      - run:
-          name: run tests
+      - run:        
+          name: prepare tools
+          command: |
+            npm install stylus -g
+
+      - run:        
+          name: build
           command: |
             make all screenshots release
