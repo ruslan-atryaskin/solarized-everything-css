@@ -15,14 +15,13 @@ jobs:
           command: |
             if ! [ $(which phantomjs) ]; then                
               sudo curl --output /usr/local/bin/phantomjs https://s3.amazonaws.com/circle-downloads/phantomjs-2.1.1
-              sudo chmod ugo+x /usr/local/bin/phantomjs
             fi
             if ! [ $(which stylus) ]; then
               sudo npm install stylus -g            
             fi
-            
-            sudo apt-get update
-            sudo apt-get install -y pngcrush
+
+            sudo chmod -R ugo+x /usr/local/bin/
+            sudo bash -c 'apt-get update && apt-get install -y pngcrush'
 
       - save_cache:
           key: phantomjs
