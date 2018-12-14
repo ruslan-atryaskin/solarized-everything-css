@@ -16,7 +16,7 @@ jobs:
       - run:        
           name: prepare tools
           command: |
-            npm install stylus -g
+            sudo npm install stylus -g
 
       - run:        
           name: build
