@@ -49,6 +49,4 @@ workflows:
   build:
     jobs:
       - build
-        context: DEFAULT
-
-        
+          context: DEFAULT
