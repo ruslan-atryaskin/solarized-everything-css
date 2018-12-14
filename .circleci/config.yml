@@ -7,6 +7,9 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - run:
+          command: sudo chmod -R ugo+rw /usr/local
+          
       - restore_cache:
           key: phantomjs
       
@@ -20,7 +23,7 @@ jobs:
               sudo npm install stylus -g            
             fi
 
-            sudo chmod -R ugo+x /usr/local/bin/
+            sudo chmod -R ugo+x /usr/local/bin
             sudo bash -c 'apt-get update && apt-get install -y pngcrush'
 
       - save_cache:
